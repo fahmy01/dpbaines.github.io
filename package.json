@@ -1,0 +1,30 @@
+{
+  "name": "dpbaines.github.io",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No test specified\"",
+    "prestart": "npm install",
+    "start": "http-server ./site -a localhost -p 8000 -c-1"
+  },
+  "dependencies": {
+    "angular": "1.7.x",
+    "angular-route": "1.7.x",
+    "bootstrap": "3.3.x"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.7.x",
+    "http-server": "^0.11.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpbaines/dpbaines.github.io.git"
+  },
+  "author": "David",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dpbaines/dpbaines.github.io/issues"
+  },
+  "homepage": "https://github.com/dpbaines/dpbaines.github.io#readme"
+}
