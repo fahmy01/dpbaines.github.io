@@ -2,6 +2,16 @@
     opacity: 0.75;
 }
 
+@font-face {
+    font-family: FiraCode;
+    src: url(font/ttf/FiraCode-Regular.ttf);
+}
+
+body {
+    font-family: FiraCode;
+    color: white;
+}
+
 @media only screen and (max-width: 768px) {
     #header {
         background-attachment: initial !important;
@@ -9,4 +19,31 @@
     #header .bottom-header h2 {
         font-size:66px;
     }
+}
+
+.headcon {
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 2px;
+    border-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.namecon {
+    position: absolute;
+    margin-bottom: 2%;
+}
+
+.background_1 {
+    background-color: #002b36;
+}
+
+.background_2 {
+    background-color: #073642;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }

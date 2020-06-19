@@ -3,14 +3,15 @@
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
+    <script src="quarantine.js"></script>
     <link rel="stylesheet" href="lib/octicons/build/build.css">
 
     <link rel="stylesheet" href="site.css" />
 
     <title>David Baines</title>
     </head>
-    <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <body class="background_1" id="body">
+    <nav class="navbar navbar-dark navbar-expand-lg">
         <a class="navbar-brand" href="#">David Baines</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -28,9 +29,14 @@
         </button>
     </nav>
 
-    <div class="jumbotron">
-        <h1 class="display-4">Website coming soon!</h1>
-        <p class="lead">I am in the process of developing my website, please check back later</p>
+    <div class="background_2" id="quarantinezone">
+        <!-- Template image while I find a sexier photo of me -->
+        <div id="david" class="davidzone">
+            <img class="headcon" src="res/img/davidnoquality.jpg"/>
+        </div>
+        <h1 class="namecon display-4">David Baines</h1>
+
+        <h3>Currently quarantining please maintain 6 pixels of distance thank you</h3>
     </div>
     </body>
 </html>
