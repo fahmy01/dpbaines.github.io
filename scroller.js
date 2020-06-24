@@ -28,18 +28,22 @@ function update_ticker() {
 
     current_idx++;
     if (current_idx == professions.length) current_idx = 0;
+    num_list++;
 }
 
 function remove_extra() {
     var scroll_item = document.getElementById("scroller");
-    if (num_list >= 3) scroll_item.removeChild(scroll_item.lastElementChild);
+    if (num_list > 3) {
+       scroll_item.removeChild(scroll_item.lastElementChild);
+       num_list--;
+    }
 }
 
 function init_timeout() {
     var third_period = 8000;
 
     setInterval(update_ticker, third_period / 3);
-    setInterval(remove_extra, third_period);
+    setInterval(remove_extra, third_period / 3);
 }
 
 window.onfocus = function() {
