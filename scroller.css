@@ -1,0 +1,27 @@
+@keyframes scroll-item {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;
+        transform: translateY(100px);}
+}
+
+.scroller {
+    /* animation-name: scroll;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; */
+    height: 90px;
+}
+
+.scroll-item {
+    font-size: 32px;
+    position: absolute;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    opacity: 0;
+
+    animation-name: scroll-item;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}

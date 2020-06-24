@@ -3,15 +3,17 @@
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
-    <script src="quarantine.js"></script>
+    <script src="scroller.js"></script>
+    <!-- <script src="quarantine.js"></script> -->
     <link rel="stylesheet" href="lib/octicons/build/build.css">
 
     <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="scroller.css" />
 
     <title>David Baines</title>
     </head>
     <body class="background_1" id="body">
-    <nav class="navbar navbar-dark navbar-expand-lg">
+    <nav class="navbar navbar-dark navbar-expand-lg menu">
         <a class="navbar-brand" href="#">David Baines</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -31,12 +33,32 @@
 
     <div class="background_2" id="quarantinezone">
         <!-- Template image while I find a sexier photo of me -->
-        <div id="david" class="davidzone">
+        <div id="david" class="davidzone header_grid_1">
             <img class="headcon" src="res/img/davidnoquality.jpg"/>
         </div>
-        <h1 class="namecon display-4">David Baines</h1>
+        <div class="header_grid_2">
+            <h1 class="namecon display-4">David Baines</h1>
+        </div>
+        <div>
+            <p class="light_header">Who am I...</p>
+        </div>
+        <div>
+            <div id="scroller" class="scroller">
+                
+            </div>
+        </div>
+    </div>
 
-        <h3>Currently quarantining please maintain 6 pixels of distance thank you</h3>
+    <div class="about_me">
+        <div>
+            
+        </div>
+    </div>
+
+    <div class="projects">
+        <div>
+            
+        </div>
     </div>
     </body>
 </html>
