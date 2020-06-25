@@ -2,7 +2,7 @@
     0% {opacity: 0;}
     50% {opacity: 1;}
     100% {opacity: 0;
-        transform: translateY(100px);}
+        transform: translateY(150px);}
 }
 
 .scroller {
@@ -14,7 +14,7 @@
 }
 
 .scroll-item {
-    font-size: 32px;
+    font-size: 52px;
     position: absolute;
     margin-top: 5px;
     margin-bottom: 5px;
