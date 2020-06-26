@@ -19,11 +19,13 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
     font-family: Roboto;
     color: white;
+    height: 100%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -51,21 +53,22 @@ body {
     position: static;
 
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
 }
 
 .header_grid_1 {
     z-index: -1;
-    grid-column: 1 / 3;
+    grid-column: 1 / 2;
 }
 
 .header_grid_2 {
     z-index: -1;
-    grid-column: 1 / 3;
+    grid-column: 1 / 2;
 }
 
 .light_header {
     opacity: 0;
+    font-size: 0px;
 }
 
 .immovable {
@@ -86,6 +89,11 @@ body {
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px; */
+}
+
+.spacer {
+    margin-bottom: 10px;
+    height: 100%;
 }
 
 .namecon {
@@ -144,16 +152,16 @@ body {
     font-family: Roboto-Light;
     text-align: center;
     font-size: 60px;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-right: 10px;
     margin-right: 10px;
 }
 
 .grid_info_column {
     font-family: Roboto;
-    font-size: 32px;
-    padding: 20px;
-    padding-top: 100px;
+    font-size: 20px;
+    padding: 5px;
+    padding-top: 50px;
 }
 
 .bottom_shadow {
@@ -167,7 +175,14 @@ body {
     border-radius: 5px;
 }
 
-@media (min-width: 720px) {
+@media only screen and (min-width: 720px) {
+    .grid_info_column {
+        font-family: Roboto;
+        font-size: 32px;
+        padding: 20px;
+        padding-top: 100px;
+    }
+
     .light_header {
         font-family: Roboto-Light;
         vertical-align: center;
@@ -218,7 +233,7 @@ body {
     }
 }
 
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
     .background_2 {
         /* background-color: #37474f; */
         margin-top: 5px;
@@ -294,10 +309,6 @@ body {
     z-index: 100;
     width: 100%;
     top: 0px;
-}
-
-.spacer {
-    height: 100%;
 }
 
 .link-david {
