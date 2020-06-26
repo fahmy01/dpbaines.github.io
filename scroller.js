@@ -3,14 +3,17 @@ var current_idx = 0;
 var num_list = 0;
 
 var professions = [
-    "Computer Engineer",
+    "Electrical Engineer",
     "Researcher",
+    "Computer Engineer",
     "Tech Enthusiast",
     "Formula Student Engineer",
+    "Former Thai Expat",
     "Bicyclicler",
     "Machinist",
     "History Buff",
     "Linux Ricer",
+    "Wannabe Car Guy",
     "Gym goer",
     "International Student"
 ];
