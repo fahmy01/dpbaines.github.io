@@ -37,6 +37,10 @@ body {
     }
 }
 
+.projects {
+    height: 100%;
+}
+
 .background_1 {
     background-color: #102027;
 }
@@ -85,6 +89,7 @@ body {
     border-width: 2px;
     border-color: white;
     margin-top: 10px;
+    width: 300px;
     /* padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
@@ -198,7 +203,7 @@ body {
     }
     
     .projects_grid {
-        grid-template-columns: 25% 50% 25%;
+        grid-template-columns: 25% 75%;
     }
 
     .about_me_subheading {
@@ -282,7 +287,7 @@ body {
     }
     
     .projects_grid {
-        grid-template-columns: 25% 50% 25%;
+        grid-template-columns: 25% 75%;
     }
 
     .about_me_subheading {
