@@ -1,9 +1,10 @@
 .project-box {
     box-shadow: inset 0px 0px 19px -5px rgba(0,0,0,0.75);
-    width: 85%;
+    width: 100%;
     background-color: #0c1a20;
     border-radius: 5px;
     overflow-y: hidden;
+    margin-bottom: 20px;
 }
 
 .project-pic {
@@ -23,6 +24,31 @@
 .project-desc {
     font-size: 16px;
     text-align: center;
+}
+
+.project-list {
+    font-family: 'Fira Sans', sans-serif;
+    list-style-type: none;
+}
+
+.caption {
+    font-size: 16px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.781);
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.project-list > li {
+    margin-bottom: 20px;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+.project-list > li:before {
+    content: "⇁";
+    padding-right: 5px;
 }
 
 .collapsible {
@@ -50,14 +76,14 @@
 
 .content {
     padding-right: 20px;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     overflow-y: hidden;
     display: block;
     /* border-top-style: dotted;
     border-top-width: 2px;
     border-top-color: #050d11; */
 
-    font-size: 20px;
+    font-size: 14px;
 
     max-height: 0px;
     -webkit-transition: max-height 0.5s ease-in-out;
@@ -68,14 +94,14 @@
 
 .content-open {
     padding-right: 20px;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     overflow-y: hidden;
     display: block;
     border-top-style: dotted;
     border-top-width: 2px;
     border-top-color: #050d11;
 
-    font-size: 20px;
+    font-size: 14px;
 
     max-height: 0;
     -webkit-transition: max-height 0.5s ease-in-out;
@@ -85,9 +111,30 @@
 }
 
 .content-open {
-    max-height: 1000px;
+    max-height: 2000px;
 }
 
 .inner-content {
-    padding-top: 10px;
+    padding-top: 30px;
+    display: grid;
+    /* flex-flow: row wrap; */
+    grid-template-columns: 100%;
+}
+
+.project-inner-content {
+    
+}
+
+@media only screen and (min-width: 720px) {
+    .inner-content {
+        grid-template-columns: 70% 30%;
+    }
+
+    .content {
+        font-size: 20px;
+    }
+
+    .content-open {
+        font-size: 20px;
+    }
 }

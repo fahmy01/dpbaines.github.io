@@ -38,7 +38,6 @@ body {
 }
 
 .projects {
-    height: 100%;
 }
 
 .background_1 {
@@ -114,6 +113,10 @@ body {
 
 .projects_grid {
     grid-template-columns: 100%;
+}
+
+.projects_info_column {
+    margin-bottom: 800px;
 }
 
 .about_me_subheading {}

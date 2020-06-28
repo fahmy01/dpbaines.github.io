@@ -103,7 +103,7 @@
                 <div class="subheading">
                     Projects
                 </div>
-                <div class="grid_info_column">
+                <div class="grid_info_column projects_info_column">
                     <div class="project-box">
                         <div class="collapsible">
                             <img src="res/img/mandelbrot.png" alt="Mandelbrot Set" class="project-pic" />
@@ -114,21 +114,144 @@
                         </div>
                         <div class="content">
                             <div class="inner-content">
-                                <h2>Template subheading</h2> <br><br>
-                                Template information stuff asdkfjklasdjflksadf <br><br>
-                                Template information stuff asdkfjklasdjflksadf <br><br>
-                                Template information stuff asdkfjklasdjflksadf <br><br>
-                                Template information stuff asdkfjklasdjflksadf <br><br>
-                                Template information stuff asdkfjklasdjflksadf <br><br>
-                                Template information stuff asdkfjklasdjflksadf <br><br>
-                                Template information stuff asdkfjklasdjflksadf <br><br>
+                                <div class="project-inner-content">
+                                    <ul class="project-list">
+                                        <li>
+                                            The Mandelbrot Set is a famous mathematically generated fractal (shape of infinite perimeter), and is one of the best known examples of <p class="emphasize">mathematical beauty</p>
+                                        </li>
+                                        <li>
+                                            It is represented on the <p class="emphasize">complex axis</p>, and is generated iteratively using the equation <math xmlns = "http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>f</mi><mn>c</mn></msub>(<mi>x</mi>) <mo>=</mo> <msup><mi>z</mi><mn>2</mn></msup> <mo>+</mo> <mi>c</mi></mrow></math>
+                                        </li>
+                                        <li>
+                                            I created this as the final design project for our introduction to Digital Systems course
+                                        </li>
+                                        <li>
+                                            My implementation was written for the <p class="emphasize">DE1-SoC</p> development kit, using a <p class="emphasize">PS2 keyboard</p> as the input device, and outputting a <p class="emphasize">VGA signal</p>
+                                        </li>
+                                        <li>
+                                            It supports <p class="emphasize">panning</p>, <p class="emphasize">zooming</p>, and other options to <p class="emphasize">control the accuracy</p> (number of iterations) and <p class="emphasize">color output</p>
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/dpbaines/mandelbrot-set" class="link-david">Github</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.wikipedia.org/wiki/Mandelbrot_set" class="link-david">Wikipedia</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <video controls width="95%" style="padding-left: 5px;display: block;margin: 0 auto;">
+                                        <source src="res/vids/mandelbrot.webm"
+                                                type="video/webm">
+                                        Sorry, your browser doesn't support embedded videos.
+                                    </video>
+                                </div>
                             </div>
                         </div>    
                     </div>
+
+                    <!-- AUDIO VISUALIZER -->
+
+                    <div class="project-box">
+                        <div class="collapsible">
+                            <img src="res/img/audiovisualizer.png" alt="Audio Visualizer" class="project-pic" style="object-position: 50% 100%;" />
+                            <div class="project-short">Audio Visualizer</div>
+                            <div class="project-desc">
+                                Bare metal audio visualizer written in <p class="emphasize">C</p> which reads from audio in and displays the DTFS through VGA
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="inner-content">
+                                <div class="project-inner-content">
+                                    <ul class="project-list">
+                                        <li>
+                                            The Discrete Fourier Transform (DTFS) represents the <p class="emphasize">frequency domain</p> representation of a signal, in this case an audio signal 
+                                        </li>
+                                        <li>
+                                            My teammate and I worked on this project as part of our <p class="emphasize">computer organizations</p> course, as part of our final project
+                                        </li>
+                                        <li>
+                                            We wrote this program for the DE1-SoC on bare metal, which involved utilizing <p class="emphasize">memory mapped IO</p> and creating or implementing <p class="emphasize">custom math functions</p>
+                                        </li>
+                                        <li>
+                                            Furthermore we tested several signal processing steps to improve the final output, including <p class="emphasize">signal averaging</p>, and several <p class="emphasize">windowing functions</p>
+                                        </li>
+                                        <li>
+                                            We were limited by the fairly low sampling rate of the Analog-Digital Converter (ADC) present on the board, and weren't able to get a clean or visually appealing output
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/dpbaines/DE1-SoC-Audio-Visualizer" class="link-david">Github</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform" class="link-david">More info...</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img src="res/img/audiovismore.png" alt="Audio Visualizer Pic" width="95%" />
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <!-- VTR -->
+                    
+                    <div class="project-box">
+                        <div class="collapsible">
+                            <img src="res/img/vtrscreenshot.png" alt="Screenshot from VTR Github" class="project-pic" />
+                            <div class="project-short">VTR - Verilog to Routing</div>
+                            <div class="project-desc">
+                                A worldwide collaborative project to provide open source CAD for FPGA research and development, mostly <p class="emphasize">C++</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="inner-content">
+                                <div class="project-inner-content">
+                                    <ul class="project-list">
+                                        <li>
+                                            VTR is an open source CAD software for FPGA research, taking a <p class="emphasize">architecture description file</p>, and <p class="emphasize">Verilog</p> to generate a mapping of the circuit, with various quality metrics
+                                        </li>
+                                        <li>
+                                            I got to contribute to this project as part of a summer research internship, where most of my focus was on the routing portion of the code
+                                        </li>
+                                        <li>
+                                            I was tasked with implementing a <p class="emphasize">hold time violation</p> (when a signal is too fast) resolving algorithm <p class="emphasize">RCV</p>, which could be used to route circuits which would otherwise require manual intervention
+                                        </li>
+                                        <li>
+                                            My work involved <p class="emphasize">optimizing</p> the algorithm, to ensure that it had no performance impact on the normal flow of the program, as well as completing the work started by a previous student
+                                        </li>
+                                        <li>
+                                            The basic idea behind RCV, is to setup '<p class="emphasize">timing budgets</p>', which are minimum and maximum <p class="emphasize">recommended lengths</p> for each connection, the router will be encouraged to route connections so their lengths will be contained in these budgets
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/verilog-to-routing/vtr-verilog-to-routing" class="link-david">Github</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.notion.so/Current-Readings-12e2f16db60844f0988c7598f9805bde" class="link-david">My Reading List</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.eecg.utoronto.ca/~vaughn/papers/tcad2008_rcv.pdf" class="link-david">Link to RCV Paper</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img src="res/img/vtrlogicalconnections.gif" alt="VTR Logical Connections Gif" width="95%" style="padding-left: 5px;display: block;margin: 0 auto;" />
+                                    <div class="caption">
+                                        GIF taken from VTR Github
+                                    </div>
+                                    <img src="res/img/rcvalgorithm.png" alt="RCV algorithm" width="95%" style="padding-left: 5px;display: block;margin: 0 auto;" />
+                                    <div class="caption">
+                                        RCV (Routing Cost Valleys) connection cost function
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+
+
                 </div>
             </div>
         </div>
-        <div class="spacer"></div>
     </div>
     </body>
 </html>
