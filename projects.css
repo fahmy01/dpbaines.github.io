@@ -121,8 +121,21 @@
     grid-template-columns: 100%;
 }
 
+.inner-content-sorting {
+    padding-top: 30px;
+    display: grid;
+    /* flex-flow: row wrap; */
+    grid-template-columns: 100%;
+}
+
 .project-inner-content {
     
+}
+
+.sorting-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 @media only screen and (min-width: 720px) {
