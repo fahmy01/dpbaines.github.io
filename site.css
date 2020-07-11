@@ -183,6 +183,14 @@ body {
     border-radius: 5px;
 }
 
+.footer {
+    background-color: #0c1a20;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: Roboto-Light;
+}
+
 @media only screen and (min-width: 720px) {
     .grid_info_column {
         font-family: Roboto;
@@ -329,6 +337,11 @@ body {
     background-color: #1f343d;
     border-radius: 5px;
     color: white;
+}
+
+.orange-text {
+    color: #f57c00;
+    display: inline;
 }
 
 .emphasize {
