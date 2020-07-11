@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="favicon.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:export-ydpi="6.1440001"
+   inkscape:export-xdpi="6.1440001"
+   inkscape:export-filename="/home/dbaines/Documents/projects/dpbaines.github.io/favicon.png"
+   id="svg16"
+   version="1.1"
+   viewBox="0 0 132.29167 132.29166"
+   height="500"
+   width="500.00003">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     inkscape:window-maximized="0"
+     inkscape:window-y="6"
+     inkscape:window-x="6"
+     inkscape:window-height="2089"
+     inkscape:window-width="3822"
+     units="px"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     inkscape:pagecheckerboard="true"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="256.64948"
+     inkscape:cx="-6.7381361"
+     inkscape:zoom="2"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showguides="false">
+    <inkscape:grid
+       originy="-49.744275"
+       originx="-17.846228"
+       id="grid845"
+       type="xygrid" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-17.846229,-49.744275)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <circle
+       style="fill:#007892;fill-opacity:1;stroke:#007892;stroke-width:5.58425;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path840"
+       cx="83.992065"
+       cy="115.89011"
+       r="56.133636" />
+    <path
+       d="m 118.15756,81.389641 -34.16549,34.691109 33.78996,34.30982 a 48.057551,48.724862 0 0 0 9.87701,-14.24872 V 95.258369 A 48.057551,48.724862 0 0 0 118.15756,81.389641 Z M 83.99207,116.08075 49.86989,81.433729 a 48.057551,48.724862 0 0 0 -9.544802,14.015944 v 40.501157 a 48.057551,48.724862 0 0 0 9.920065,14.39618 z"
+       style="fill:none;stroke:#fc8210;stroke-width:6.27355;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path847" />
+  </g>
+</svg>
