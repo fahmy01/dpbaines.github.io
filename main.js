@@ -28,9 +28,24 @@ function init_projects() {
     }
 }
 
+function init_navbar() {
+    var navbar = document.getElementById("navbar-toggle");
+    navbar.addEventListener("click", function() {
+        var navthing = document.getElementById("navbarNav");
+        if (navthing.classList.contains("navcollapse")) {
+            navthing.classList.remove("navcollapse");
+            navthing.classList.add("navopen");
+        } else {
+            navthing.classList.remove("navopen");
+            navthing.classList.add("navcollapse");
+        }
+    });
+}
+
 function init() {
     init_timeout();
     init_projects();
+    init_navbar();
 }
 
 window.onload = init;

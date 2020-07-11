@@ -116,7 +116,11 @@ body {
 }
 
 .projects_info_column {
-    margin-bottom: 800px;
+    padding-bottom: 50px;
+}
+
+.blog_grid {
+    grid-template-columns: 100%;
 }
 
 .about_me_subheading {}
@@ -191,6 +195,10 @@ body {
     font-family: Roboto-Light;
 }
 
+.navcollapse {}
+
+.navopen {}
+
 @media only screen and (min-width: 720px) {
     .grid_info_column {
         font-family: Roboto;
@@ -214,6 +222,10 @@ body {
     }
     
     .projects_grid {
+        grid-template-columns: 25% 75%;
+    }
+
+    .blog_grid {
         grid-template-columns: 25% 75%;
     }
 
@@ -246,6 +258,36 @@ body {
 
     .bottom_shadow {
         width: 80%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .navcollapse {
+        overflow-y: hidden;
+        display: block;
+        text-align: center;
+    
+        max-height: 0px;
+        -webkit-transition: max-height 0.25s ease-out;
+        -moz-transition: max-height 0.25s ease-out;
+        -o-transition: max-height 0.25s ease-out;
+        transition: max-height 0.25s ease-out;
+    }
+    
+    .navopen {
+        overflow-y: hidden;
+        display: block;
+        text-align: center;
+    
+        max-height: 500px;
+        -webkit-transition: max-height 0.25s ease-out;
+        -moz-transition: max-height 0.25s ease-out;
+        -o-transition: max-height 0.25s ease-out;
+        transition: max-height 0.25s ease-out;
+    }
+
+    .navbar {
+        
     }
 }
 
