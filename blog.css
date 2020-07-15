@@ -17,7 +17,24 @@
     text-align: center;
     font-family: Roboto-Light;
     font-size: 30px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
     margin-bottom: 20px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.blog_text {
+    font-family: Roboto;
+    font-size: 20px;
+    padding: 5px;
+    padding-top: 50px;
+}
+
+.blog_date {
+    font-family: Roboto-Light;
+    font-style: italic;
+    color: #f57c00;
 }
