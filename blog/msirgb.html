@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css" />
+    <script src="../scroller.js"></script>
+    <script src="../main.js"></script>
+    <!-- <script src="quarantine.js"></script> -->
+    <link rel="stylesheet" href="../lib/octicons/build/build.css">
+
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="../site.css" />
+    <link rel="stylesheet" href="../scroller.css" />
+    <link rel="stylesheet" href="../projects.css" />
+    <link rel="stylesheet" href="../blog.css" />
+
+    <title>David Baines</title>
+    </head>
+    <body class="background_1" id="body">
+    <nav class="navbar navbar-dark navbar-expand-lg menu">
+        <a class="navbar-brand" href="#">David Baines</a>
+        <div class="navcollapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/#about-me">About Me <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/#projects">Projects <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/blog.html">Blog <span class="sr-only">(current)</span></a>
+            </li>
+            </ul>
+        </div>
+
+        <span class="nav-item navbar-right">
+            <a class="nav-link d-none d-lg-block" href="https://github.com/dpbaines"><img class="octicon github-icon pull-right" src="../lib/octicons/build/svg/mark-github.svg"></img></a>
+        </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggle">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="bottom_shadow"></div>
+    <div class="blog" id="blog">
+        <div class="blog_container">
+            <div class="blog_title">
+                <div>
+                    Custom RGB controller for Linux - MSI Motherboards
+                </div>
+                <div class="blog_date">
+                    21-July-2020
+                </div>
+            </div>
+            <div class="blog_text">
+                This weekend I bought some RGB strips for my computer for $20 on Amazon. My motherboard (MSI Tomahawk B450) has RGB headers onboard, which are controlled by the NCT6795D Super I/O chip. For research and just preference lately, I have been daily driving Arch Linux, with a Windows dual boot. Unfortunately MSI does not provide software for Linux. <br><br>
+                I decided to create an RGB controller for linux, that would preferably run as a service in the background and interactively control the LEDs. This was made a lot easier by finding a github repo (linked below) of someone who already reverse engineered MSI's windows software. They also left beautifully documented code.<br><br>
+                The RGB header can be controlled by writing to port 4E in /dev/port, which has the memory layout as described below (courtesy of nagisa). <br><br>
+
+                <table>
+                    <tr><th class="left_col">00</th><td>...</td></tr>
+                    <tr><th class="left_col">01</th><td>...</td></tr>
+                    <tr><th class="left_col">.</th><td>...</td></tr>
+                    <tr><th class="left_col">.</th><td>...</td></tr>
+                    <tr><th class="left_col">.</th><td>...</td></tr>
+                    <tr><th class="left_col">E0</th><td>EE XX XX XX</td><td>XP XX XX XX</td><td>XX XX XX XX</td><td>XX XX XX XX</td></tr>
+                    <tr><th class="left_col">F0</th><td>RR RR RR RR</td><td>GG GG GG GG</td><td>BB BB BB BB</td><td>XX XX TT TT</td></tr>
+                    <tr><td></td><th class="bottom_col">00 01 02 03</th><th class="bottom_col">04 05 06 07</th><th class="bottom_col">08 09 0A 0B</th><th class="bottom_col">0C 0D 0E 0F</th></tr>
+                </table>
+
+                <br><br>
+
+                Each colour channel has 4bit colour, giving me actually a lot more colour choices than the official MSI Mystic Light Windows softare. Each R, G, or B in the above table represents a single 4 bit colour frame, which the IO chip will cycle through with delay given in the locations marked T. <br><br>
+                The location marked with T gives control over the time between frames, and the options to fade colours, and invert intensity etc. The location marked P is where pulsing can be enabled or disabled. <br><br>
+                If you set all the colour frames to a single colour, it has the effect of making it a solid colour. I have my program right now polling the averaged CPU load from /proc/loadavg every 5 seconds, and settings the lights to a colour corresponding to the load. <br><br>
+                A smooth colour gradient is created by choosing two colours for 0% CPU load, and 100% CPU load, and using linear interpolation to create a smooth gradient between these two colours at a given load percentage. <br><br>
+                I have it transition from green at 0% CPU load, to red at 300% (3 threads being at 100% usage), and then from red to blue as it uses the rest of my 12 thread system. This has the effect of using almost the entire colour range, and giving me a nearly real time interactive RGB setup. <br><br>
+                Furthermore I also implemented a night mode, which will turn the LEDs to red past 12AM (blue light hurts circadian rythm), and pulse beyond 300% CPU load. <br><br>
+                Next steps are to make it more configurable, and possibly support other motherboard systems?
+                
+                <br><br>
+                <ul class="project-list">
+                    <li>
+                        Github repo: <a class="link-david" href="https://github.com/nagisa/msi-rgb">https://github.com/nagisa/msi-rgb</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/dpbaines/MSI-RGB-Linux" class="link-david">Repo containing my project</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <video controls width="95%" style="padding-left: 5px;display: block;margin: 0 auto;">
+                    <source src="../res/vids/msirgb.webm"
+                            type="video/webm">
+                    Sorry, your browser doesn't support embedded videos.
+                </video>
+                <div class="caption">
+                    RGB setup as I compile a project on all 12 threads
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div style="font-size: 20px;">
+            David Baines™
+        </div>
+        <div>
+            <p class="orange-text">Email</p> david.baines (at) mail (dot) utoronto (dot) ca
+        </div>
+    </div>
+    </body>
+</html>

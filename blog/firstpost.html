@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css" />
+    <script src="../scroller.js"></script>
+    <script src="../main.js"></script>
+    <!-- <script src="quarantine.js"></script> -->
+    <link rel="stylesheet" href="../lib/octicons/build/build.css">
+
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="../site.css" />
+    <link rel="stylesheet" href="../scroller.css" />
+    <link rel="stylesheet" href="../projects.css" />
+    <link rel="stylesheet" href="../blog.css" />
+
+    <title>David Baines</title>
+    </head>
+    <body class="background_1" id="body">
+    <nav class="navbar navbar-dark navbar-expand-lg menu">
+        <a class="navbar-brand" href="#">David Baines</a>
+        <div class="navcollapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/#about-me">About Me <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/#projects">Projects <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/blog.html">Blog <span class="sr-only">(current)</span></a>
+            </li>
+            </ul>
+        </div>
+
+        <span class="nav-item navbar-right">
+            <a class="nav-link d-none d-lg-block" href="https://github.com/dpbaines"><img class="octicon github-icon pull-right" src="../lib/octicons/build/svg/mark-github.svg"></img></a>
+        </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggle">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="bottom_shadow"></div>
+    <div class="blog" id="blog">
+        <div class="blog_container">
+            <div class="blog_title">
+                <div>
+                    First Blog Post, and I made some progress on research...
+                </div>
+                <div class="blog_date">
+                    07-July-2020
+                </div>
+            </div>
+            <div class="blog_text">
+                I finally got RCV back in a relatively working order. So far I have been testing it on a custom FPGA architecture file with greatly exaggerated hold time requirements on internal flipflops, to encourage hold time violations during routing. <br><br>
+                Ideally the algorithm I'm implementing would encourage the wiring to take longer paths, if it thinks there would be a hold, or short path violation, thus increasing the delay in a connection and potentially resolving these issues. <br><br>
+                Having tested the algorithm on smaller circuits, it's shown to completely remove short path violations, while still meeting the frequency constraints set by an engineer to a certain degree. <br><br>
+                It is having trouble with larger circuits, that require more routing, and it takes significantly longer than without the algorithm, but these are all next steps! <br><br>
+                The pictures on the right represent the effect my algorithm has on one of the simplest circuits, a single register to another register, also running on another modified architecture with the same hold time requirements, with no clustering. <br><br>
+                As can be seen, before running my algorithm, the router simply chooses the fastest routing it can find, and then discovers that the route it has taken is too fast. The end results is the router lapping the LUT in an effort to increase connection delay, a result I find beautiful. <br><br>
+                As expected, it does resolve these timing issues.
+            </div>
+            <div>
+                <img src="../res/blog/rcvbefore.png" alt="Before RCV" width="75%" style="padding-left: 5px;display: block;margin: 0 auto;" />
+                <div class="caption">
+                    Before fixing hold violations
+                </div>
+                <img src="../res/blog/rcvafter.png" alt="After RCV" width="75%" style="padding-left: 5px;display: block;margin: 0 auto;" />
+                <div class="caption">
+                    After fixing hold violations
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div style="font-size: 20px;">
+            David Baines™
+        </div>
+        <div>
+            <p class="orange-text">Email</p> david.baines (at) mail (dot) utoronto (dot) ca
+        </div>
+    </div>
+    </body>
+</html>

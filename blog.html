@@ -56,35 +56,45 @@
                 ¿Blog?
             </div>
             <div class="grid_info_column">
-                <div class="blog_container">
-                    <div class="blog_title">
-                        <div>
-                            First Blog Post, and I made some progress on research...
+                
+                <!-- RGB -->
+
+                <a href="blog/msirgb.html">
+                    <div class="blog_link">
+                        <div class="blog_title">
+                            <div>
+                                Custom RGB controller for Linux - MSI Motherboards
+                            </div>
+                            <div class="blog_date">
+                                21-July-2020
+                            </div>
                         </div>
-                        <div class="blog_date">
-                            07-July-2020
+                        <div class="blog_summary">
+                            Right now MSI does not provide software to control RGB strips connected to the motherboard for Linux, I created one to provide interactive, and actually greater control than MSI's own mystic light software for Windows
                         </div>
+                        <img src="../res/blog/msirgb.jpg" alt="Before RCV" class="blog_pic" style="object-position: 100% 25%;" />
                     </div>
-                    <div class="blog_text">
-                        I finally got RCV back in a relatively working order. So far I have been testing it on a custom FPGA architecture file with greatly exaggerated hold time requirements on internal flipflops, to encourage hold time violations during routing. <br><br>
-                        Ideally the algorithm I'm implementing would encourage the wiring to take longer paths, if it thinks there would be a hold, or short path violation, thus increasing the delay in a connection and potentially resolving these issues. <br><br>
-                        Having tested the algorithm on smaller circuits, it's shown to completely remove short path violations, while still meeting the frequency constraints set by an engineer to a certain degree. <br><br>
-                        It is having trouble with larger circuits, that require more routing, and it takes significantly longer than without the algorithm, but these are all next steps! <br><br>
-                        The pictures on the right represent the effect my algorithm has on one of the simplest circuits, a single register to another register, also running on another modified architecture with the same hold time requirements, with no clustering. <br><br>
-                        As can be seen, before running my algorithm, the router simply chooses the fastest routing it can find, and then discovers that the route it has taken is too fast. The end results is the router lapping the LUT in an effort to increase connection delay, a result I find beautiful. <br><br>
-                        As expected, it does resolve these timing issues.
-                    </div>
-                    <div>
-                        <img src="res/blog/rcvbefore.png" alt="Before RCV" width="75%" style="padding-left: 5px;display: block;margin: 0 auto;" />
-                        <div class="caption">
-                            Before fixing hold violations
+                </a>
+
+                <!-- FIRST POST -->
+
+                <a href="blog/firstpost.html">
+                    <div class="blog_link">
+                        <div class="blog_title">
+                            <div>
+                                First Blog Post, and I made some progress on research...
+                            </div>
+                            <div class="blog_date">
+                                07-July-2020
+                            </div>
                         </div>
-                        <img src="res/blog/rcvafter.png" alt="After RCV" width="75%" style="padding-left: 5px;display: block;margin: 0 auto;" />
-                        <div class="caption">
-                            After fixing hold violations
+                        <div class="blog_summary">
+                            Status update on my research. I finally have results to show that look promising! Not done yet.
                         </div>
+                        <img src="../res/blog/rcvbefore.png" alt="Before RCV" class="blog_pic" />
                     </div>
-                </div>
+                </a>
+
             </div>
         </div>
     </div>
