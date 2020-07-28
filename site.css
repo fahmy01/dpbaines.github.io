@@ -17,6 +17,13 @@
     src: url(font/roboto/Roboto-Thin.ttf);
 }
 
+@font-face {
+    font-family: 'SF Kingston Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF Kingston Regular'), url('font/SF Kingston.woff') format('woff');
+}
+
 html {
     scroll-behavior: smooth;
     height: 100%;
@@ -78,8 +85,11 @@ body {
     position: fixed;
     top: 10%;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     z-index: -1;
+    background-image: url("res/img/background.png");
+    background-position: center;
+    background-size: 100% 100%;
 }
 
 .headcon {
@@ -103,8 +113,10 @@ body {
 .namecon {
     margin-top: 20px;
     margin-bottom: 2%;
-    font-family: Roboto-Thin;
-    font-size: 92px;
+    padding-left: 25px;
+    text-align: center;
+    font-family: 'SF Kingston Regular';
+    font-size: 124px;
 }
 
 .about_me_grid {
@@ -333,9 +345,10 @@ body {
 
     .immovable {
         position: fixed;
-        top: 33%;
+        top: 0%;
         width: 100%;
-        height: fit-content;
+        height: 100%;
+        padding-top: 15%;
         z-index: -1;
     }
 
