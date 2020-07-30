@@ -9,7 +9,7 @@ var professions = [
     "Tech Enthusiast",
     "Formula Student Engineer",
     "Former Thai Expat",
-    "Bicyclicler",
+    "Bicyclist",
     "Machinist",
     "History Buff",
     "Linux Ricer",
