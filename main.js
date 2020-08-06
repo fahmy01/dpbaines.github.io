@@ -30,14 +30,21 @@ function init_projects() {
 
 function init_navbar() {
     var navbar = document.getElementById("navbar-toggle");
+    var navbaricon = document.getElementById("nav-icon-glyph");
     navbar.addEventListener("click", function() {
         var navthing = document.getElementById("navbarNav");
         if (navthing.classList.contains("navcollapse")) {
             navthing.classList.remove("navcollapse");
             navthing.classList.add("navopen");
+            
+            navbaricon.classList.remove("nav-icon-animate");
+            navbaricon.classList.add("nav-icon-animate-active");
         } else {
             navthing.classList.remove("navopen");
             navthing.classList.add("navcollapse");
+            
+            navbaricon.classList.remove("nav-icon-animate-active");
+            navbaricon.classList.add("nav-icon-animate");
         }
     });
 }

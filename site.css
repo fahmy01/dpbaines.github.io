@@ -229,10 +229,24 @@ body {
     }
 }
 
+.nav-item-animate {
+    transform: rotate(0deg);
+    transition: transform 1s ease-out;
+    -webkit-transition: transform 1s ease-out;
+    -moz-transition: transform 1s ease-out;
+}
+
+.nav-item-animate-active {
+    transform: rotate(90deg);
+    transition: transform 1s ease-out;
+    -webkit-transition: transform 1s ease-out;
+    -moz-transition: transform 1s ease-out;
+}
+
 .nav-icon-animate path:nth-child(2) {
     fill:none;
     stroke:#ffffff;
-    stroke-width:8.06502882;
+    stroke-width:3;
     stroke-linecap:round;
     stroke-linejoin:round;
     stroke-miterlimit:4;
