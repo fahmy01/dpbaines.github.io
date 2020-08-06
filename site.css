@@ -211,6 +211,49 @@ body {
     font-family: Roboto-Light;
 }
 
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dash-out {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: 1000;
+    }
+}
+
+.nav-icon-animate path:nth-child(2) {
+    fill:none;
+    stroke:#ffffff;
+    stroke-width:8.06502882;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:4;
+    stroke-dasharray: none;
+    stroke-opacity:1;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    /* animation: dash-out 4s ease-out forwards; */
+    transition: stroke-dashoffset 1s ease-out;
+    -webkit-transition: stroke-dashoffset 1s ease-out;
+    -moz-transition: stroke-dashoffset 1s ease-out;
+}
+
+.nav-icon-animate-active path:nth-child(2) {
+    /* animation: dash 4s ease-out forwards; */
+    transition: stroke-dashoffset 1s ease-out;
+    -webkit-transition: stroke-dashoffset 1s ease-out;
+    -moz-transition: stroke-dashoffset 1s ease-out;
+    stroke-dashoffset: 1000;
+}
+
 .navcollapse {}
 
 .navopen {}
