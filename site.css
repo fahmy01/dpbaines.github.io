@@ -117,7 +117,7 @@ body {
     margin-bottom: 2%;
     text-align: center;
     font-family: 'SF Kingston Regular';
-    font-size: 124px;
+    font-size: 96px;
 }
 
 .about_me_grid {
@@ -268,6 +268,28 @@ body {
     stroke-dashoffset: 1000;
 }
 
+.navbar-button-david {
+    display: unset;
+    border-width: 0px;
+    background-color: #00000000;
+}
+
+.navbar-inactive-icon {
+    transition: transform 0.5s ease-out;
+    -webkit-transition: transform 0.5s ease-out;
+    -moz-transition: transform 0.5s ease-out;
+    transform: rotate(0deg);
+}
+
+.navbar-active-icon {
+    transition: transform 0.5s ease-out;
+    -webkit-transition: transform 0.5s ease-out;
+    -moz-transition: transform 0.5s ease-out;
+    transform: rotate(90deg);
+}
+
+.navbar-button-david:hover {}
+
 .navcollapse {}
 
 .navopen {}
@@ -280,6 +302,10 @@ body {
         font-size: 32px;
         padding: 20px;
         padding-top: 100px;
+    }
+
+    .navbar-button-david {
+        display: none;
     }
 
     .light_header {
