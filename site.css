@@ -24,6 +24,10 @@
     src: local('SF Kingston Regular'), url('font/SF Kingston.woff') format('woff');
 }
 
+a {
+    color: white;
+}
+
 html {
     scroll-behavior: smooth;
     height: 100%;
@@ -288,11 +292,42 @@ body {
     transform: rotate(90deg);
 }
 
+.menu {
+    color: white;
+    background-color: #62727b;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    list-style-type: none;
+}
+
+.navlist-david {
+    padding-left: 5px;
+    margin: 0px;
+}
+
 .navbar-button-david:hover {}
 
 .navcollapse {}
 
 .navopen {}
+
+.navmobile {
+    background-color: #738b99;
+    color: white !important;
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    box-shadow: -1px 30px 20px -29px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: -1px 30px 20px -29px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: -1px 30px 20px -29px rgba(0,0,0,0.75) inset;
+}
 
 .slider {}
 
@@ -306,6 +341,18 @@ body {
 
     .navbar-button-david {
         display: none;
+    }
+
+    .navmobile {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+
     }
 
     .light_header {
@@ -497,14 +544,6 @@ body {
     .content_grid {
         min-height: 100%;
     }
-}
-
-.menu {
-    background-color: #62727b;
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    top: 0px;
 }
 
 .link-david {

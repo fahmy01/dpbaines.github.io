@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     
     <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css" />
+    <script src="../lib/snap.svg-min.js"></script>
     <script src="../scroller.js"></script>
     <script src="../main.js"></script>
     <!-- <script src="quarantine.js"></script> -->
@@ -22,32 +23,59 @@
     <title>David Baines</title>
     </head>
     <body class="background_1" id="body">
-    <nav class="navbar navbar-dark navbar-expand-lg menu">
-        <a class="navbar-brand" href="#">David Baines</a>
-        <div class="navcollapse" id="navbarNav">
+        <nav class="navbar navbar-dark navbar-expand-lg menu">
+            <a class="navbar-brand" href="#" style="font-family: 'SF Kingston Regular';font-size: 24px;">David Baines</a>
+            <div class="navcollapse" id="">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active nav-item-animate">
+                    <a class="nav-link" href="/#">Home <span class="sr-only">(current)</span></a>
+                    <span class="nav-slider"></span>
+                </li>
+                <li class="nav-item active nav-item-animate">
+                    <a class="nav-link" href="/#about-me">About Me <span class="sr-only">(current)</span></a>
+                    <span class="nav-slider"></span>
+                </li>
+                <li class="nav-item active nav-item-animate">
+                    <a class="nav-link" href="/#projects">Projects <span class="sr-only">(current)</span></a>
+                    <span class="nav-slider"></span>
+                </li>
+                <li class="nav-item active nav-item-animate">
+                    <a class="nav-link" href="/blog.html">Blog <span class="sr-only">(current)</span></a>
+                    <span class="nav-slider"></span>
+                </li>
+                </ul>
+            </div>
+    
+            <span class="nav-item navbar-right">
+                <a class="nav-link d-none d-lg-block" href="https://github.com/dpbaines"><img class="octicon github-icon pull-right" src="../lib/octicons/build/svg/mark-github.svg"></img></a>
+            </span>
+            <div class="navbar-button-david" id="navbar-toggle">
+                <svg id="svg-icon" width="30" height="30">
+                    
+                </svg>
+            </div>
+        </nav>
+    
+        <div class="navcollapse navmobile" id="navbarNav">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
+            <li class="nav-item active nav-item-animate">
                 <a class="nav-link" href="/#">Home <span class="sr-only">(current)</span></a>
+                <span class="nav-slider"></span>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item active nav-item-animate">
                 <a class="nav-link" href="/#about-me">About Me <span class="sr-only">(current)</span></a>
+                <span class="nav-slider"></span>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item active nav-item-animate">
                 <a class="nav-link" href="/#projects">Projects <span class="sr-only">(current)</span></a>
+                <span class="nav-slider"></span>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item active nav-item-animate">
                 <a class="nav-link" href="/blog.html">Blog <span class="sr-only">(current)</span></a>
+                <span class="nav-slider"></span>
             </li>
             </ul>
         </div>
-
-        <span class="nav-item navbar-right">
-            <a class="nav-link d-none d-lg-block" href="https://github.com/dpbaines"><img class="octicon github-icon pull-right" src="../lib/octicons/build/svg/mark-github.svg"></img></a>
-        </span>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggle">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
 
     <div class="bottom_shadow"></div>
     <div class="blog" id="blog">
