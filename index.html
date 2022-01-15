@@ -13,7 +13,10 @@
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="site.css" />
     <link rel="stylesheet" href="scroller.css" />
@@ -106,7 +109,7 @@
             </div>
             <div class="grid_info_column">
                 Computer Engineering student at the University of Toronto specializing in <p class="emphasize">computer hardware</p> and <p class="emphasize">digital systems</p>. <br><br>
-                Currently working as a <p class="emphasize">student researcher</p> on the <a href="https://github.com/verilog-to-routing/vtr-verilog-to-routing" class="link-david">VTR project</a>; CAD software for FPGA research and development. <br><br>
+                Currently working as a <p class="emphasize">student researcher</p> on the <a href="https://github.com/verilog-to-routing/vtr-verilog-to-routing" class="link-david">VTR project</a>; CAD software for FPGA research and development. <br>
             </div>
             <div class="grid_info_column">
                 <div class="linkbox">
@@ -129,328 +132,22 @@
             </div>
         </div>
     </div>
-    <div class="bottom_shadow"></div>
 
-    <div class="projects" id="projects">
-        <div>
-            <div class="content_grid projects_grid">
-                <div class="subheading">
-                    Projects
+    <div id="experience" class="content_grid">
+        <div class="subheading">Experience</div>
+        <div class="grid_info_column" id="projects">
+            <div class="project-container">
+                <div class="project-cell">
+                    <div class="project-time">May 2021- Current</div>
+                    <div class="project-title">Intel PSG.</div>
+                    <div class="project-role">Software Engineering Intern</div>
+                    <div class="project-description">Insert description of what I did</div>
+                    
                 </div>
-                <div class="grid_info_column projects_info_column">
-                    <div class="project-box">
-                        <div class="collapsible">
-                            <img src="res/img/mandelbrot.png" alt="Mandelbrot Set" class="project-pic" />
-                            <div class="project-short">The Mandelbrot Set</div>
-                            <div class="project-desc">
-                                A <p class="emphasize">Verilog</p> project which generates an interactive mandelbrot set and outputs VGA
-                            </div>
-                        </div>
-                        <div class="content">
-                            <div class="inner-content">
-                                <div class="project-inner-content">
-                                    <ul class="project-list">
-                                        <li>
-                                            The Mandelbrot Set is a famous mathematically generated fractal (shape of infinite perimeter), and is one of the best known examples of <p class="emphasize">mathematical beauty</p>
-                                        </li>
-                                        <li>
-                                            It is represented on the <p class="emphasize">complex axis</p>, and is generated iteratively using the equation <math xmlns = "http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>f</mi><mn>c</mn></msub>(<mi>x</mi>) <mo>=</mo> <msup><mi>z</mi><mn>2</mn></msup> <mo>+</mo> <mi>c</mi></mrow></math>
-                                        </li>
-                                        <li>
-                                            I created this as the final design project for our introduction to Digital Systems course
-                                        </li>
-                                        <li>
-                                            My implementation was written for the <p class="emphasize">DE1-SoC</p> development kit, using a <p class="emphasize">PS2 keyboard</p> as the input device, and outputting a <p class="emphasize">VGA signal</p>
-                                        </li>
-                                        <li>
-                                            It supports <p class="emphasize">panning</p>, <p class="emphasize">zooming</p>, and other options to <p class="emphasize">control the accuracy</p> (number of iterations) and <p class="emphasize">color output</p>
-                                        </li>
-                                        <li>
-                                            <a href="https://github.com/dpbaines/mandelbrot-set" class="link-david">Github</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://en.wikipedia.org/wiki/Mandelbrot_set" class="link-david">Wikipedia</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <video controls width="95%" style="padding-left: 5px;display: block;margin: 0 auto;">
-                                        <source src="res/vids/mandelbrot.webm"
-                                                type="video/webm">
-                                        Sorry, your browser doesn't support embedded videos.
-                                    </video>
-                                </div>
-                            </div>
-                        </div>    
-                    </div>
-
-                    <!-- AUDIO VISUALIZER -->
-
-                    <div class="project-box">
-                        <div class="collapsible">
-                            <img src="res/img/audiovisualizer.png" alt="Audio Visualizer" class="project-pic" style="object-position: 50% 100%;" />
-                            <div class="project-short">Audio Visualizer</div>
-                            <div class="project-desc">
-                                Bare metal audio visualizer written in <p class="emphasize">C</p> which reads from audio in and displays the DTFS through VGA
-                            </div>
-                        </div>
-                        <div class="content">
-                            <div class="inner-content">
-                                <div class="project-inner-content">
-                                    <ul class="project-list">
-                                        <li>
-                                            The Discrete Fourier Transform (DTFS) represents the <p class="emphasize">frequency domain</p> representation of a signal, in this case an audio signal 
-                                        </li>
-                                        <li>
-                                            My teammate and I worked on this project as part of our <p class="emphasize">computer organizations</p> course, as part of our final project
-                                        </li>
-                                        <li>
-                                            We wrote this program for the DE1-SoC on bare metal, which involved utilizing <p class="emphasize">memory mapped IO</p> and creating or implementing <p class="emphasize">custom math functions</p>
-                                        </li>
-                                        <li>
-                                            Furthermore we tested several signal processing steps to improve the final output, including <p class="emphasize">signal averaging</p>, and several <p class="emphasize">windowing functions</p>
-                                        </li>
-                                        <li>
-                                            We were limited by the fairly low sampling rate of the Analog-Digital Converter (ADC) present on the board, and weren't able to get a clean or visually appealing output
-                                        </li>
-                                        <li>
-                                            <a href="https://github.com/dpbaines/DE1-SoC-Audio-Visualizer" class="link-david">Github</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform" class="link-david">More info...</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <img src="res/img/audiovismore.png" alt="Audio Visualizer Pic" width="95%" />
-                                </div>
-                            </div>
-                        </div>    
-                    </div>
-
-                    <!-- VTR -->
-                    
-                    <div class="project-box">
-                        <div class="collapsible">
-                            <img src="res/img/vtrscreenshot.png" alt="Screenshot from VTR Github" class="project-pic" />
-                            <div class="project-short">VTR - Verilog to Routing</div>
-                            <div class="project-desc">
-                                A worldwide collaborative project to provide open source CAD for FPGA research and development, mostly <p class="emphasize">C++</p>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <div class="inner-content">
-                                <div class="project-inner-content">
-                                    <ul class="project-list">
-                                        <li>
-                                            VTR is an open source CAD software for FPGA research, taking a <p class="emphasize">architecture description file</p>, and <p class="emphasize">Verilog</p> to generate a mapping of the circuit, with various quality metrics
-                                        </li>
-                                        <li>
-                                            I got to contribute to this project as part of a summer research internship, where most of my focus was on the routing portion of the code
-                                        </li>
-                                        <li>
-                                            I was tasked with implementing a <p class="emphasize">hold time violation</p> (when a signal is too fast) resolving algorithm <p class="emphasize">RCV</p>, which could be used to route circuits which would otherwise require manual intervention
-                                        </li>
-                                        <li>
-                                            My work involved <p class="emphasize">optimizing</p> the algorithm, to ensure that it had no performance impact on the normal flow of the program, as well as completing the work started by a previous student
-                                        </li>
-                                        <li>
-                                            The basic idea behind RCV, is to setup '<p class="emphasize">timing budgets</p>', which are minimum and maximum <p class="emphasize">recommended lengths</p> for each connection, the router will be encouraged to route connections so their lengths will be contained in these budgets
-                                        </li>
-                                        <li>
-                                            <a href="https://github.com/verilog-to-routing/vtr-verilog-to-routing" class="link-david">Github</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.notion.so/Current-Readings-12e2f16db60844f0988c7598f9805bde" class="link-david">My Reading List</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.eecg.utoronto.ca/~vaughn/papers/tcad2008_rcv.pdf" class="link-david">Link to RCV Paper</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <img src="res/img/vtrlogicalconnections.gif" alt="VTR Logical Connections Gif" width="95%" style="padding-left: 5px;display: block;margin: 0 auto;" />
-                                    <div class="caption">
-                                        GIF taken from VTR Github
-                                    </div>
-                                    <img src="res/img/rcvalgorithm.png" alt="RCV algorithm" width="95%" style="padding-left: 5px;display: block;margin: 0 auto;" />
-                                    <div class="caption">
-                                        RCV (Routing Cost Valleys) connection cost function
-                                    </div>
-                                </div>
-                            </div>
-                        </div>    
-                    </div>
-                    
-                    <!-- UTFR -->
-
-                    <div class="project-box">
-                        <div class="collapsible">
-                            <img src="res/img/formula.jpg" alt="Old Formula Chassis" class="project-pic" />
-                            <div class="project-short">UTFR - University of Toronto Formula Racing</div>
-                            <div class="project-desc">
-                                A design team which annually designs and manufactures formula style <p class="emphasize">racecars</p> to compete in FSAE events worldwide
-                            </div>
-                        </div>
-                        <div class="content">
-                            <div class="inner-content">
-                                <div class="project-inner-content">
-                                    <ul class="project-list">
-                                        <li>
-                                            FSAE is a worldwide student oriented organization, which creates and hosts events <p class="emphasize">worldwide</p> for engineering students to compete against one another in a number of events
-                                        </li>
-                                        <li>
-                                            Teams are expected to design and build a new car each year, which encourages <p class="emphasize">constant improvement</p>
-                                        </li>
-                                        <li>
-                                            As part of UTFR I have experienced both the <p class="emphasize">design</p>, and <p class="emphasize">manufacturing</p> stages of development, and learned how to use tools I would have never had the chance to otherwise
-                                        </li>
-                                        <li>
-                                            Things I have manufactured include <p class="emphasize">solenoid housings</p> for an electronic gear shifter, and numerous parts across the car especially in <p class="emphasize">suspension</p> and <p class="emphasize">steering</p>
-                                        </li>
-                                        <li>
-                                            I have also designed a number of parts for <p class="emphasize">steering</p> on our latest car, as well as manufactured almost all of said parts, until COVID stopped me early :(
-                                                david.peter.baines@gmail.com                      I'm also helping the electric team model our wiring harness in CAD, using <p class="emphasize">Vesys</p> to generate the harness, and <p class="emphasize">Solidworks</p> routing to route it on the car model
-                                        </li>
-                                        <li>
-                                            <a href="https://fsaeutoronto.ca/" class="link-david">UTFR Website</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <img src="res/img/bangingphoto.jpg" alt="Making Steering Columns" width="95%" style="padding-left: 5px;display: block;margin: 0 auto;" />
-                                    <div class="caption">
-                                        Credits to Alex Ramos
-                                    </div>
-                                </div>
-                            </div>
-                        </div>    
-                    </div>
-                    
-                    <!-- Reverse Engineering -->
-
-                    <div class="project-box">
-                        <div class="collapsible">
-                            <img src="res/img/reveng.png" alt="Hexdump of a program" class="project-pic" />
-                            <div class="project-short">Reverse Engineering Exploration</div>
-                            <div class="project-desc">
-                                My efforts into learning how to <p class="emphasize">disassemble</p> and analyze binaries, as well as how to abuse security flaws
-                            </div>
-                        </div>
-                        <div class="content">
-                            <div class="inner-content">
-                                <div class="project-inner-content">
-                                    <ul class="project-list">
-                                        <li>
-                                            Reverse engineering is the idea of taking something apart, and analysing its design, and its flaws to either <p class="emphasize">exploit it</p>, or <p class="emphasize">improve upon it</p>
-                                        </li>
-                                        <li>
-                                            A couple of years ago I found a video by popular youtuber Sethbling, where he combines a number of exploits in <a href="https://www.youtube.com/watch?v=hB6eY73sLV0" class="link-david">Super Mario World on the SNES to recreate flappy bird</a> in game, a video I <p class="emphasize">highly recommend</
-                                        </li>
-                                        <li>
-                                            I then wanted to learn more, and soon had disassembled Super Mario World and written a <p class="emphasize">patch</p> to give infinite coins whenever you jumped, in doing so learning a lot about <p class="emphasize">assembly</p>, and how computers work on a lower level
-                                        </li>
-                                        <li>
-                                            Lately I have been trying these online puzzles called <p class="emphasize">crackmes</p>, which are <p class="emphasize">executable binaries</p>, as well as a description of the goal, such as to rig an election in one
-                                        </li>
-                                        <li>
-                                            In doing so I have learnt the basics of a number of techniques such as <p class="emphasize">patching</p>, <p class="emphasize">buffer overflow exploits</p>, <p class="emphasize">LD_PRELOAD exploits</p>, and creating custom <p class="emphasize">keygens</p> for programs 
-                                        </li>
-                                        <li>
-                                            I have also used this to learn how to use tools on Linux, as well as <p class="emphasize">Ghidra</p>, an open source NSA reverse engineering tool
-                                        </li>
-                                        <li>
-                                            <a href="https://crackmes.one/" class="link-david">Where I get my puzzles</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <img src="res/img/overflow.png" alt="Testing a Buffer Overflow exploit" width="95%" style="padding-left: 5px;display: block;margin: 0 auto;" />
-                                    <div class="caption">
-                                        Buffer Overflow Exploit for a crackme
-                                    </div>
-                                </div>
-                            </div>
-                        </div>    
-                    </div>
-                    
-                    <!-- Sorting -->
-
-                    <div class="project-box">
-                        <div class="collapsible">
-                            <img src="res/img/sort.png" alt="Sorting Algorithm" class="project-pic" />
-                            <div class="project-short">Sorting Algorithms</div>
-                            <div class="project-desc">
-                                More of a visual project, just to aid my understanding of these algorithms for a course, gifs generated in <p class="emphasize">C</p>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <div class="inner-content-sorting">
-                                <div class="project-inner-content">
-                                    <div class="sorting-flex">
-                                        <div>
-                                            <img src="res/vids/bubblesort.gif" alt="Bubble Sort" />
-                                            <p class="caption">Bubble Sort</p>
-                                        </div>
-                                        <div>
-                                            <img src="res/vids/insertionsort.gif" alt="Insertion Sort" />
-                                            <p class="caption">Insertion Sort</p>
-                                        </div>
-                                        <div>
-                                            <img src="res/vids/selectsort.gif" alt="Selection Sort" />
-                                            <p class="caption">Selection Sort</p>
-                                        </div>
-                                        <div>
-                                            <img src="res/vids/quicksort.gif" alt="Quick Sort" />
-                                            <p class="caption">Quick Sort</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>    
-                    </div>
-
-                </div>
+                <div id="timeline"></div>
             </div>
         </div>
     </div>
-
-    <!-- Figure out where to use this its kind of cool -->
-    <!-- <svg width="150" height="150">
-        <g
-         inkscape:label="Layer 1"
-         inkscape:groupmode="layer"
-         id="layer1">
-        <path
-           style="fill:none;stroke:#000000;stroke-width:8.06502882;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stroke-dasharray:50;"
-           d="M 110,110 10,10 m 0,100 100,-100 m -100,0 0,100 m 100,-100 0,100"
-           id="path845">
-          <animate attributeName="stroke-dashoffset" from="0" to="1000" dur="3s" repeatCount="indefinite"/>
-          </path>
-      </g>
-    
-    Sorry, your browser does not support inline SVG.
-    </svg> -->
-
-    <!-- <svg width="30" height="30" class="nav-icon-animate" id="nav-icon-glyph">
-                <g
-                id="layer1"
-                inkscape:groupmode="layer"
-                inkscape:label="Layer 1">
-                <path
-                    sodipodi:nodetypes="cccc"
-                    style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stroke-dasharray:1000;stroke-dashoffset:50%;"
-                    id="path845"
-                    d="M 26,26 4,4 M 26,4 4,26">
-                </g>
-        
-            <path
-            sodipodi:nodetypes="cccc"
-            id="path846"
-            d="M 4,4 4,26 M 26,4 26,26">
-            </path>
-            Sorry, your browser does not support inline SVG.
-        </svg> -->
 
     <div class="footer">
         <div style="font-size: 20px;">
@@ -460,5 +157,11 @@
             <p class="orange-text">Email</p> david.baines (at) mail (dot) utoronto (dot) ca
         </div>
     </div>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script src="Projects.js" type="text/babel"></script>
     </body>
 </html>
