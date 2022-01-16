@@ -2,19 +2,19 @@
 class Experience extends React.Component {
     render() {
         return (
-            <div className="project-container">
-                <div className="project-cell" style={{borderRightColor: this.props.hintColor}}>
-                    <div className="project-time">{this.props.time}</div>
-                    <div className="project-title">{this.props.title}</div>
-                    <div className="project-role">{this.props.role}</div>
-                    <div className="project-description">{this.props.description}</div>
+            <div className="experience-container">
+                <div className="experience-cell" style={{borderRightColor: this.props.hintColor}}>
+                    <div className="experience-time">{this.props.time}</div>
+                    <div className="experience-title">{this.props.title}</div>
+                    <div className="experience-role">{this.props.role}</div>
+                    <div className="experience-description">{this.props.description}</div>
                 </div>
             </div>
         );
     }
 }
 
-class Projects extends React.Component {
+class Experiences extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -49,5 +49,5 @@ class Projects extends React.Component {
     }
 }
 
-const domContainer = document.querySelector('#projects');
-ReactDOM.render(<Projects />, domContainer);
+const domContainer = document.querySelector('#experiences');
+ReactDOM.render(<Experiences />, domContainer);

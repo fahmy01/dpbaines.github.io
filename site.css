@@ -432,7 +432,6 @@ body {
     }
 
     .content_grid {
-        min-height: 100%;
         grid-template-columns: 25% 75%;
     }
 
@@ -545,7 +544,6 @@ body {
     }
 
     .content_grid {
-        min-height: 100%;
     }
 }
 

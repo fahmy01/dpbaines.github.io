@@ -1,6 +1,13 @@
 {
     "experiences": [
         {
+            "title": "Amazon",
+            "role": "Software Development Engineer",
+            "time": "Future",
+            "description": "Insert description here",
+            "color": "#FF9900"
+        },
+        {
             "title": "Intel PSG.",
             "role": "Software Engineering Intern",
             "time": "May 2021 - Current",
