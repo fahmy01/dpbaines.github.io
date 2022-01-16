@@ -1,0 +1,18 @@
+{
+    "experiences": [
+        {
+            "title": "Intel PSG.",
+            "role": "Software Engineering Intern",
+            "time": "May 2021 - Current",
+            "description": "Insert description here",
+            "color": "#007DC3"
+        },
+        {
+            "title": "VTR - Verilog to Routing",
+            "role": "Intern Researcher",
+            "time": "May 2020 - September 2020",
+            "description": "Insert description here",
+            "color": "#fcba03"
+        }
+    ]
+}
