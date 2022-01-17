@@ -1,0 +1,21 @@
+{
+    "list": [
+    {
+        "type": "title",
+        "content": "Audio Visualizer in Verilog"
+    },
+    {
+        "type": "text",
+        "content": "The audio visualizer"
+    },
+    {
+        "type": "image",
+        "url": "res/img/audiovisualizer.png",
+        "caption": "Screenshot showing output"
+    },
+    {
+        "type": "link",
+        "content": "Github",
+        "url": "https://github.com/dpbaines/DE1-SoC-Audio-Visualizer"
+    }]
+}
