@@ -1,0 +1,18 @@
+{
+    "projects": [
+        {
+            "title": "Mandelbrot Set",
+            "summary": "A Mandelbrot set renderer in Verilog, targetted for a Cyclone V FPGA.",
+            "url": "res/img/mandelbrot.png",
+            "page": "projects/mandelbrot.json",
+            "color": "rgba(130, 160, 243, 0.5)"
+        },
+        {
+            "title": "Posfix",
+            "summary": "Fix your posture or else",
+            "url": "res/img/audiovisualizer.png",
+            "page": "projects/posfix.json",
+            "color": "rgba(130, 160, 243, 0.5)"
+        }
+    ]
+}

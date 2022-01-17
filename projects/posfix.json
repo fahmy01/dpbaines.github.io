@@ -1,0 +1,10 @@
+{
+    "list": [{
+        "type": "text",
+        "content": "Posfix Cool"
+    },
+    {
+        "type": "image",
+        "url": "res/img/audiovisualizer.png"
+    }]
+}

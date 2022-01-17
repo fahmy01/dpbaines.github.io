@@ -1,0 +1,10 @@
+{
+    "list": [{
+        "type": "text",
+        "content": "Testing testing 1 2 3..."
+    },
+    {
+        "type": "image",
+        "url": "res/img/mandelbrot.png"
+    }]
+}

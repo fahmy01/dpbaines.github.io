@@ -1,4 +1,130 @@
 
+function close_modal() {
+    const modalBox = document.querySelector(".modal");
+        modalBox.style.display = "none";
+}
+
+class Project extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            page: props.page
+        };
+    }
+
+    handleClick() {
+        const modalBox = document.querySelector(".modal");
+        modalBox.style.display = "block";
+        this.props.updateCallback(this.props.page);
+    }
+
+    render() {
+        const urlStyle = "url('" + this.props.url + "')";
+
+        return (
+            <div className="project-container" onClick={() => this.handleClick()}>
+                <div className="project-cell">
+                    <div className="project-title" style={{borderColor: this.props.hintColor}}>{this.props.title}</div>
+                    <div className="project-summary">{this.props.summary}</div>
+                    <div className="project-image" style={{backgroundImage: urlStyle}}></div>
+                </div>
+            </div>
+        );
+    }
+}
+
+class PopupContent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            content: [{
+                "type": "text",
+                "content": "Loading..."
+            }],
+            currUrl: this.props.page
+        };
+    }
+
+    componentDidMount() {
+        fetch(this.props.page)
+            .then(response => response.json())
+            .then(y => this.setState({content: y.list}));
+    }
+
+    componentDidUpdate() {
+        if (this.state.currUrl != this.props.page) {
+            this.componentDidMount();
+            this.setState({currUrl: this.props.page});
+        }
+    }
+
+    render() {
+        const output = this.state.content.map((val => {
+            switch(val.type) {
+                case "text":
+                    return <p className="popup-text">{val.content}</p>
+                    break;
+                case "image":
+                    return <img src={val.url}></img>
+                    break;
+                default:
+                    return <p>Invalid tag type</p>
+            }
+        }));
+        return (
+            <div>
+                {output}
+            </div>
+        );
+    }
+}
+
+class Projects extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            projs : [{
+                "title": "Loading...",
+                "summary": "",
+                "url": "res/img/mandelbrot.png",
+                "page": "projects/mandelbrot.json",
+                "color": "#007DC3"
+            }],
+            currentPage: "projects/mandelbrot.json"
+        };
+    }
+
+    componentDidMount() {
+        let expUrl = "projects.json";
+        fetch(expUrl)
+            .then(response => response.json())
+            .then(y => this.setState({projs: y.projects}));
+    }
+
+    updateStateCallback(update_url) {
+        this.setState({currentPage: update_url});
+        console.log(update_url);
+        console.log(this.state);
+    }
+
+    render() {
+        const mappedProjs = this.state.projs.map((proj) =>
+            <Project key={proj.page} title={proj.title} hintColor={proj.color} url={proj.url} page={proj.page} summary={proj.summary} updateCallback={(update_url => this.updateStateCallback(update_url))} />
+        );
+
+        return (
+            <div>
+                {mappedProjs}
+                <div className="modal" onClick={() => close_modal()}>
+                    <div className="modal-content" onClick={() => event.stopPropagation()}>
+                        <PopupContent page={this.state.currentPage} />
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
 class Experience extends React.Component {
     render() {
         return (
@@ -38,7 +164,7 @@ class Experiences extends React.Component {
     render() {
         const mappedExps = this.state.exps.map((exp) =>
             <Experience key={exp.title} title={exp.title} hintColor={exp.color} time={exp.time} role={exp.role} description={exp.description} />
-        );  
+        );
         // console.log(Array.isArray(mappedExps));
 
         return (
@@ -49,5 +175,8 @@ class Experiences extends React.Component {
     }
 }
 
-const domContainer = document.querySelector('#experiences');
-ReactDOM.render(<Experiences />, domContainer);
+const expContainer = document.querySelector('#experiences');
+ReactDOM.render(<Experiences />, expContainer);
+
+const projContainer = document.querySelector('#projects-box');
+ReactDOM.render(<Projects />, projContainer);
