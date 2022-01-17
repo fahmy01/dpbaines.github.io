@@ -144,4 +144,51 @@
     border-radius: 10px;
     padding: 20px;
     width: 55%;
+    max-height: 75%;
+    overflow-y: scroll;
+}
+
+.popup-text {
+    font-size: 24px;
+}
+
+.popup-title {
+    font-size: 48px;
+    font-weight: bold;
+    border-bottom-width: 5px;
+    border-bottom-style: dotted;
+}
+
+.popup-img {
+    display: block;
+    width: 25%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popup-img-caption {
+    font-family: Roboto-Light;
+    font-size: 20px;
+    color: rgb(97, 97, 97);
+    text-align: center;
+}
+
+.popup-link {
+    font-size: 24px;
+    color: black;
+    border-width: 0px;
+    border-bottom-width: 10px;
+    border-style: solid;
+    white-space: nowrap;
+
+    height: 31px;
+    width: fit-content;
+    max-width: 0px;
+    transition: max-width 0.2s ease-in;
+}
+
+.popup-link:hover {
+    color: black;
+    max-width: 100px;
 }

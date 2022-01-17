@@ -1,10 +1,20 @@
 {
-    "list": [{
+    "list": [
+    {
+        "type": "title",
+        "content": "Mandelbrot Set FPGA Design"
+    },    
+    {
         "type": "text",
-        "content": "Testing testing 1 2 3..."
+        "content": "This was a Verilog project to render the Mandelbrot set on an FPGA using a VGA output. I built and targetted this for the DE1-SoC which is based on the Cyclone V."
     },
     {
         "type": "image",
-        "url": "res/img/mandelbrot.png"
+        "url": "res/img/mandelbrot.png",
+        "caption": "Placeholder image for now"
+    },
+    {  
+        "type": "text",
+        "content": "The user could interface with the FPGA using a PS/2 which would provide zoom and panning, as well as allow the user to change the 'resolution' of the render. The Mandelbrot set is generated using an iterative function, in which a given coordinate is defined as being in the set if the function will not diverge to infinity. We only test a finite number of iterations, but it follows that more iterations are required to prevent false positives, this is what I mean by 'resolution'."
     }]
 }

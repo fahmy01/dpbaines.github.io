@@ -13,9 +13,9 @@ class Project extends React.Component {
     }
 
     handleClick() {
+        this.props.updateCallback(this.props.page, this.props.hintColor);
         const modalBox = document.querySelector(".modal");
         modalBox.style.display = "block";
-        this.props.updateCallback(this.props.page);
     }
 
     render() {
@@ -65,7 +65,23 @@ class PopupContent extends React.Component {
                     return <p className="popup-text">{val.content}</p>
                     break;
                 case "image":
-                    return <img src={val.url}></img>
+                    return (
+                        <div>
+                            <img className="popup-img" src={val.url}></img>
+                            <p className="popup-img-caption">{val.caption}</p>
+                        </div>
+                    );
+                    break;
+                case "title":
+                    return <p className="popup-title" style={{borderColor: this.props.hintColor}} >{val.content}</p>
+                    break;
+                case "link":
+                    return (
+                    <div className="popup-link" style={{borderColor: this.props.hintColor}}>
+                        <a href={val.url} style={{color: "black"}}>
+                            {val.content}
+                        </a>
+                    </div>);
                     break;
                 default:
                     return <p>Invalid tag type</p>
@@ -90,7 +106,8 @@ class Projects extends React.Component {
                 "page": "projects/mandelbrot.json",
                 "color": "#007DC3"
             }],
-            currentPage: "projects/mandelbrot.json"
+            currentPage: "projects/mandelbrot.json",
+            currentHintColor: "#007DC3"
         };
     }
 
@@ -101,23 +118,23 @@ class Projects extends React.Component {
             .then(y => this.setState({projs: y.projects}));
     }
 
-    updateStateCallback(update_url) {
-        this.setState({currentPage: update_url});
+    updateStateCallback(update_url, hintColor) {
+        this.setState({currentPage: update_url, currentHintColor: hintColor});
         console.log(update_url);
         console.log(this.state);
     }
 
     render() {
         const mappedProjs = this.state.projs.map((proj) =>
-            <Project key={proj.page} title={proj.title} hintColor={proj.color} url={proj.url} page={proj.page} summary={proj.summary} updateCallback={(update_url => this.updateStateCallback(update_url))} />
+            <Project key={proj.page} title={proj.title} hintColor={proj.color} url={proj.url} page={proj.page} summary={proj.summary} updateCallback={((update_url, hintColor) => this.updateStateCallback(update_url, hintColor))} />
         );
 
         return (
             <div>
                 {mappedProjs}
                 <div className="modal" onClick={() => close_modal()}>
-                    <div className="modal-content" onClick={() => event.stopPropagation()}>
-                        <PopupContent page={this.state.currentPage} />
+                    <div className="modal-content" onClick={(event) => event.stopPropagation()}>
+                        <PopupContent page={this.state.currentPage} hintColor={this.state.currentHintColor} />
                     </div>
                 </div>
             </div>

@@ -12,7 +12,7 @@
             "summary": "Fix your posture or else",
             "url": "res/img/audiovisualizer.png",
             "page": "projects/posfix.json",
-            "color": "rgba(130, 160, 243, 0.5)"
+            "color": "#ff787883"
         }
     ]
 }

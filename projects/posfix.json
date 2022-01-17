@@ -1,10 +1,21 @@
 {
-    "list": [{
+    "list": [
+    {
+        "type": "title",
+        "content": "Posfix MakeUofT Project"
+    },
+    {
         "type": "text",
         "content": "Posfix Cool"
     },
     {
         "type": "image",
-        "url": "res/img/audiovisualizer.png"
+        "url": "res/img/audiovisualizer.png",
+        "caption": "Placeholder image"
+    },
+    {
+        "type": "link",
+        "content": "Github",
+        "url": "https://github.com/Kojon74/PosFix"
     }]
 }
