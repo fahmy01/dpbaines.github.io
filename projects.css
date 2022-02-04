@@ -154,14 +154,14 @@
 }
 
 .popup-text {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .popup-title {
     font-size: 48px;
     font-weight: bold;
     border-bottom-width: 5px;
-    border-bottom-style: dotted;
+    border-bottom-style: solid;
 }
 
 .popup-img {

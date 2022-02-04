@@ -6,12 +6,28 @@
     },
     {
         "type": "text",
-        "content": "Posfix Cool"
+        "content": "For a hackathon, my group of 3 including me sought to develop a wearable T-shirt that would monitor your posture and send updates to an app on your phone."
+    },
+    {
+        "type": "text",
+        "content": "The app would monitor, and rate your posture over a period of time, and give you pointers on how to improve it. "
     },
     {
         "type": "image",
         "url": "res/img/audiovisualizer.png",
         "caption": "Placeholder image"
+    },
+    {
+        "type": "text",
+        "content": "I worked on the hardware and data processing side, which meant sourcing and assembling the hardware, and processing the data for the app. I soldered a PCB together which worked with a raspberry PI to read data from 4 IMU sensors placed at strategic points on a shirt, as well as a flex sensor on the lower back."
+    },
+    {
+        "type": "text",
+        "content": "The Raspberry PI communicated with the IMU's via i2c. I used Python to get the raw 9 axis IMU data, which included accelerometer, gyroscope and magnetometer data and used a Kalman filter to approximate the location and orientation in 3D space."
+    },
+    {
+        "type": "text",
+        "content": "This was all done in real time, with the data being fed back (in the form of quaternions) to the app using firebase."
     },
     {
         "type": "link",
