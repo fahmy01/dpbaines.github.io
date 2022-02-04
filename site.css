@@ -48,6 +48,13 @@ body {
     }
 }
 
+.main-canvas {
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+}
+
 .projects {
 }
 

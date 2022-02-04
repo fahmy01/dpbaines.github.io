@@ -3,7 +3,7 @@
         {
             "title": "RISC-V CPU Core",
             "summary": "A pipelined CPU core written in SystemVerilog",
-            "url": "res/img/mandelbrot.png",
+            "url": "res/img/cpurtl1.png",
             "page": "projects/cpucore.json",
             "color": "#CAB8FF83"
         },

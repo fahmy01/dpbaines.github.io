@@ -64,6 +64,8 @@
     grid-column: 1;
 }
 
+
+
 #timeline {
     display: inline-block;
     width: 20px;
@@ -80,11 +82,14 @@
     grid-template-columns: 2fr 1fr;
     height: 100%;
     width: 100%;
+    z-index: -1;
+    transform-style: preserve-3d;
 }
 
 .project-container {
     height: 150px;
     cursor: grab;
+    perspective: 10px;
 }
 
 .project-title {
@@ -161,7 +166,8 @@
 
 .popup-img {
     display: block;
-    width: 25%;
+    max-width: 50%;
+    max-height: 25%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;

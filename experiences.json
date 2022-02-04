@@ -4,21 +4,21 @@
             "title": "Amazon",
             "role": "Software Development Engineer",
             "time": "Future",
-            "description": "Insert description here",
+            "description": "Working on [redacted] as a [redacted] for AWS maybe.",
             "color": "#FF9900"
         },
         {
             "title": "Intel PSG.",
             "role": "Software Engineering Intern",
             "time": "May 2021 - Current",
-            "description": "Insert description here",
+            "description": "Worked on the Quartus router, which is one of the key steps in Verilog compilation.",
             "color": "#007DC3"
         },
         {
             "title": "VTR - Verilog to Routing",
             "role": "Intern Researcher",
             "time": "May 2020 - September 2020",
-            "description": "Insert description here",
+            "description": "Open source Verilog compiler, I worked on automatic hold resolution in the Router.",
             "color": "#fcba03"
         }
     ]
