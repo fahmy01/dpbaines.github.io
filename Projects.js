@@ -83,6 +83,11 @@ class PopupContent extends React.Component {
                         </a>
                     </div>);
                     break;
+                case "youtube":
+                    return (
+                        <center><iframe width="640px" height="360px" src={val.url} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                    );
+                    break;
                 default:
                     return <p>Invalid tag type</p>
             }

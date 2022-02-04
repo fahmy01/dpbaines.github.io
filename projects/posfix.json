@@ -13,9 +13,8 @@
         "content": "The app would monitor, and rate your posture over a period of time, and give you pointers on how to improve it. "
     },
     {
-        "type": "image",
-        "url": "res/img/audiovisualizer.png",
-        "caption": "Placeholder image"
+        "type": "youtube",
+        "url": "https://www.youtube-nocookie.com/embed/M4SF_171kio"
     },
     {
         "type": "text",
