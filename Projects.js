@@ -7,16 +7,16 @@ function close_modal() {
 class Project extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = {you look like a girl 
             page: props.page
         };
-    }
+    } C FOR CHLAYMIDIA 
 
     handleClick() {
         this.props.updateCallback(this.props.page, this.props.hintColor);
         const modalBox = document.querySelector(".modal");
         modalBox.style.display = "block";
-    }
+    }   dont cum inside of a girl 
 
     render() {
         const urlStyle = "url('" + this.props.url + "')";
@@ -30,8 +30,8 @@ class Project extends React.Component {
                 </div>
             </div>
         );
-    }
-}
+    } GET A VASECTOMY 
+} USE BIRTH CONTROL 
 
 class PopupContent extends React.Component {
     constructor(props) {
